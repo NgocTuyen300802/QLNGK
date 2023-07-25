@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>XUKA MART</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Public/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Public/dist/css/adminlte.min.css">
+
+    @RenderSection("head", required: false)
+</head>
+<body
+      class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="row navbar navbar-expand-lg  w-95">
+            <div class="container-fluid col-10 ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav text-dark">
+                    <ul class="navbar-nav text-dark ">
+                        <li class="nav-item col-1 Logo">
+                            <img src="~/Public/image/logone.png" alt="Logo" class="img-fluid"/>
+                          
+                        <li class="nav-item d-none d-sm-inline-block ">
+                            <a class="nav-link text-dark" href="/home/index">Trang chủ</a>
+                        </li>
+                        <li class="nav-item d-none d-sm-inline-block">
+                            <a class="nav-link text-dark" href="/home/contact">Liên hệ</a>
+                        </li>
+                    </ul>
+
+              
+                <div class="col-md-3 ">
+                    <form class="d-flex" role="search" method="post" action="/product/search">
+                        <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                  
+                   </div>    
+                </div>
+                   </nav>        
+                       
+                  
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+
+
+
+      
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+
+    </div>
+
+    <script src="~/Public/plugins/jquery/jquery.min.js"></script>
+
+    <script src="~/Public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Public/dist/js/adminlte.min.js"></script>
+
+   
+    @RenderBody()
+</body>
+</html>

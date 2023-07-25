@@ -1,0 +1,62 @@
+﻿@model IEnumerable<_2001200647_QLNUOCGIAIKHAT.Context.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout1.cshtml";
+}<style>
+
+    * {
+        font-family: 'Times New Roman';
+        font:12px;
+    }    
+</style>
+<setion class="content">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-10">
+                    <strong class="text-danger"> TẤT CẢ DANH MỤC SẢN PHẨM
+                    </strong>
+                </div>
+                <div class="col-md-2 text-end ">
+                   <a href="@Url.Action("Create","Product_Admin")"class="btn btn-sm btn-dark ">Thêm</a>
+        </div>
+                </div>
+            </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>CategoryID</th>
+                    <th>FullDes</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td></td>
+                        <td>@item.Name</td>
+                        <td>@item.CategoryID</td>
+                        <td>@item.FullDescription</td>
+                        <td>@item.Image</td>
+                        <td>@item.Price</td>
+                        <td style="width:180px;">
+                            
+                            <a href="@Url.Action("Edit","Product_Admin", new { id = item.Id }) " class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
+                            <a href="@Url.Action("Details","Product_Admin", new { id = item.Id }) " class="btn btn-sm btn-dark"><i class="fas fa-eye"></i></a>
+                            <a href="@Url.Action("Delete","Product_Admin", new { id = item.Id }) " class="btn btn-sm btn-info"><i class="fas fa-trash"></i></a>
+                        </td>
+
+                    </tr>
+                   
+                }
+                </table>
+        </div>
+        <div class="card-footer text-right">
+            <a href="@Url.Action("Create","Product_Admin")" class="btn btn-sm btn-sucess">Thêm</a>
+            <a href="@Url.Action("Trash","Product_Admin")" class="btn btn-sm btn-sucess">Thùng rác</a>
+        </div>
+    </div>
+</setion>

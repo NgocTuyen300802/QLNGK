@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NƯỚC GIẢI KHÁT XUKA MART</title>
+    <meta charset="utf-8" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    @RenderSection("header", required: false)
+</head>
+
+<body>
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: black;
+                box-shadow: 3px 3px 3px 3px;
+            }
+
+        * {
+            font-family: 'Times New Roman';
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <div class="container-fluid ">
+        <section class="header clearfix ">
+
+            <nav class="row navbar navbar-expand-lg bg-dark text-light w-95">
+                <div class="container-fluid col-10">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav ">
+
+                        <ul class="navbar-nav ">
+                            <li class="nav-item ">
+                                <a class="nav-link text-light" href="/home/index">Welcome, everyone ...! </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="/home/index">Trang chủ</a>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="@Url.Action("Index","Product")">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="@Url.Action("Index","Contact")">Liên hệ</a>
+                            </li>
+                            <li class="text-end">
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <p class="col-2">
+                    NƯỚC GIẢI KHÁT </br>
+                    Địa chỉ: TP.HCM - QUẬN 12.</br>
+                    Hotline: 090988809
+                </p>
+            </nav>
+        </section>
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1 Logo ">
+                        <img src="~/Public/image/logone.png"alt="Logo" class="img-fluid" />
+                       
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                DANH SÁCH SẢN PHẨM
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="@Url.Action("Main5","Product")">Nước ngọt, nước giải khát</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Main1","Product")">Bia</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Main2","Product")">Cafe</a></li>
+                                <li><a class="dropdown-item" href="@Url.Action("Main10","Product")">Nước khoáng</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ">
+                        <form class="d-flex" role="search" method="post" action="/product/search">
+                            <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+
+                        <ul class="navbar-nav ">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/User/Register">Đăng ký</a>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/User/Login">Đăng nhập</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-2 ">
+                        <ul class=" navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="@Url.Action("GioHangPartial","Cart")">Giỏ hàng</a>
+                            </li>
+                         
+                                
+                        </ul>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </nav>
+        <marquee class="text-success" role="alert" width="70%">"Chào mừng bạn đến với XUKA MART . Nơi có tất cả loại nước uống mà bạn yêu thích"</marquee>
+        <section class="mainmenu clearfix"></section>
+        <section class="maincontent clearfix ">
+            @RenderBody()
+        </section>
+
+        <div class="container-fluid text-bg-dark py-3 ">
+            <div class="row">
+
+
+                <span class="border-top border-dark"></span>
+                <div class="col-md-3">
+                    <div class="footer-box_content " width="58" height="67">
+                        <div class="footer-box_content-intro">
+
+
+                        </div>
+                    </div>
+                    <h3 class="text-warning bg-dark">
+                        <strong>
+                            <a>ĐẢM BẢO NGUỒN GỐC</a>
+                        </strong>
+                    </h3>
+                    <p> Cam kết mang đến những sản phẩm có chất lượng hàng đầu.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-box_content" width="58" height="67">
+                        <div class="footer-box_content-intro">
+
+                        </div>
+                    </div>
+                    <h3 class="text-warning bg-dark">
+                        <strong>
+                            <a>MIỄN PHÍ GIAO HÀNG</a>
+                        </strong>
+                    </h3>
+                    <p>Cho đơn hàng trên 300k, nhỏ hơn 5kg và 10km</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-box_content" width="58" height="67">
+                        <div class="footer-box_content-intro">
+
+                        </div>
+                    </div>
+                    <h3 class="text-warning bg-dark">
+                        <strong>
+                            <a>THANH TOÁN ĐA DẠNG</a>
+                        </strong>
+                    </h3>
+                    <p>Thanh toán khi nhận hàng, Chuyển khoản, VNPay,...</p>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-box_content" width="58" height="67">
+                        <div class="footer-box_content-intro ">
+
+
+                        </div>
+                    </div>
+                    <h3 class="text-warning bg-dark">
+                        <strong>
+                            <a href="#" class="text-warning">HOTLINE HỖ TRỢ</a>
+                        </strong>
+                    </h3>
+                    <p> Cam kết mang đến những sản phẩm có chất lượng hàng đầu.</p>
+                </div>
+                <section class="copyright clearfix bg-footer border-top border-light p-0">
+                    <div style="width: 100%; height: fit-content; background-color :#e2f9ef">
+                        <div class="row" style="padding:20px">
+                            <div class="col-6 col-md-4">
+                                <b class="text-danger">THÔNG TIN</b>
+                                <p class="text-dark">Công ty Cổ phần thương mại và dịch vụ XUKA</p>
+                                <p class="text-dark"> Địa chỉ văn phòng: Tầng 3, Số 01, đường Minh Cầu, Phường Phan Đình Phùng, TP. Thái Nguyên, Thái Nguyên</p>
+                                <p class="text-dark">   Địa chỉ: TP.HCM - QUẬN 12   </p>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <b class="text-danger">THÔNG TIN & CHÍNH SÁCH</b>
+                                <p class="text-dark">
+                                    Tin tức
+                                </p>
+                                <p class="text-dark">
+                                    Xu và Mã giảm giá
+                                </p>
+
+                                <p class="text-dark">
+                                    Thanh toán & Bảo Hành
+                                </p>
+
+                                <p class="text-dark">
+                                    Giao hàng & Nhận hàng
+                                </p>
+                                <p class="text-dark">Điều khoản mua bán hàng hóa</p>
+                                <p class="text-dark">Chính sách bảo mật</p>
+                            </div>
+
+                            <div class="col-6 col-md-4 text-end">
+                                <span class="text-danger">COPYRIGHTS © XUKA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+    @RenderSection("footer",required:false)
+</body>
+</html>

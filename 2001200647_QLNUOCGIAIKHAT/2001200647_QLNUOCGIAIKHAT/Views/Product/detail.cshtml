@@ -1,0 +1,46 @@
+﻿@model _2001200647_QLNUOCGIAIKHAT.Context.Product
+
+@{
+    ViewBag.Title = "detail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container">
+    <table class="table table-bordered table-success">
+        <tr>
+            <td>
+                <b>Tên</b>
+            </td>
+            <td>
+                <b>Gía</b>
+            </td>
+            <td>
+                <b>Thông tin sản phẩm</b>
+            </td>
+            <td>
+                <b>Ảnh sản phẩm</b>
+            </td>
+        </tr>
+        <tr>
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Price VND</td>
+            <td>@Model.FullDescription</td>
+            <td><img src="~/Public/image/@Model.Image" /></td>
+
+        </tr>
+
+    </table>
+    <tr class="py-2">
+        <td class=" py-4">
+            <a href="@Url.Action("ThemGioHang","Cart",new { @ms =Model.CategoryID,@strURL = Request.Url.ToString()})">
+                <input type="submit" value=" Giỏ hàng " class="btn btn-success" />
+            </a>
+            <p class="btn-btn-success text-end">
+                @Html.ActionLink("Quay về trang chủ", "Index")
+            </p>
+
+        </td>
+    </tr>
+  
+</div>

@@ -1,0 +1,61 @@
+﻿@model List<_2001200647_QLNUOCGIAIKHAT.Context.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    .maxhight {
+        height: 470px;
+    }
+
+    .imgheight {
+        height: 200px;
+        width: 224px;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: black;
+            box-shadow: 3px 3px 3px 3px;
+        }
+
+    * {
+        font-family: 'Quire Sans';
+    }
+</style>
+<div class="container">
+    <dv class="row">
+
+        <div class="container-fluid">
+            <p><b>Kết Qủa Tìm Kiếm : @ViewBag.Search</b></p>
+            </div>
+
+        @foreach (var item in Model)
+        {
+
+            <a class="card col-3 maxhight  " href="/product/detail/@item.Id">
+                <div class="card-img card-img-top">
+                    <img src="~/Public/image/@item.Image" class="figure-img imgheight  text-center" />
+                </div>
+                <div class="card-title text-center h-50">
+                    <p class="h5 text-wrap text-center">@item.Name </p>
+                    <p class="h6 text-black text-center">@item.Price VND</p>
+                </div>
+                <div class="card-footer flex-column">
+                    <div class="btn btn-dark btn-sm float-end"> Chi tiết sản phẩm </div>
+
+                </div>
+            </a>
+
+
+        }
+
+
+</div>
+
+

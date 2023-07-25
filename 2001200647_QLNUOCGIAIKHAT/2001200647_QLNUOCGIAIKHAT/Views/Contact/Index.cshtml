@@ -1,0 +1,55 @@
+﻿
+@model _2001200647_QLNUOCGIAIKHAT.Models.Contact
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<div class="form-horizontal">
+    <h4>Liên hệ với chúng tôi</h4>
+    <form class="row g-3">
+        <div class="col-md-6">
+            <label for="exampleInputName" class="form-label">Họ tên</label>
+            <input type="text" class="form-control" id="exampleInputName">
+        </div>
+
+        <div class="col-md-6">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail">
+        </div>
+        <div class="col-md-6">
+            <label for="exampleInputPhone" class="form-label">Điện Thoại</label>
+            <input type="text" class="form-control" id="exampleInputPhone">
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationTextarea" class="form-label">Vấn đề</label>
+            <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Xin hãy điền vào" required></textarea>
+
+        </div>
+        <div class="text-center py-2">
+            <button class="btn btn-dark btn-sm" type="submit">Gửi</button>
+        </div>
+        <div class="col-md-6">
+            <div class="form-">
+                <div class="contact_info">
+                    <h3>
+                        Tìm chúng tôi ở đây
+                    </h3>
+                    <h5>Chúng tôi sẽ hỗ trợ bạn bất cứ khi nào bạn muốn</h5>
+                </div>
+                <div class="company_address">
+                    <h3>Thông tin Shop :</h3>
+                    <p> 255 Phan Văn Hớn</p>
+                    <p>TÂN THỚI NHẤT -Q 12 - TP.HỒ CHÍ MINH</p>
+                    <p>VIỆT NAM</p>
+                    <p>Phone:090988809</p>
+                    <p>ZALO: 090988809</p>
+                    <p>Email: <span><a href="#">xukamart@gmail.com</a></span></p>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+</div>
